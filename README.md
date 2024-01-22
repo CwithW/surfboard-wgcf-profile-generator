@@ -16,6 +16,6 @@ https://replit.com/@misaka-blog/wgcf-profile-generator
 
 ## 鸣谢
 
-* https://raw.githubusercontent.com/Misaka-blog/wgcf-profile-generator/
+* https://github.com/Misaka-blog/wgcf-profile-generator/
 * Replit：https://replit.com/
 * Wgcf项目：https://github.com/ViRb3/wgcf
