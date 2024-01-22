@@ -56,7 +56,7 @@ fi
 license_key=${license_key//-/_}
 set -e
 
-output_filename="surfboard_warp_${license_key}.surfboard"
+output_filename="surfboard_warp_${license_key}.conf"
 python3 generate_surfboard_config.py wgcf-profile.conf > ../$output_filename
 
 rm -f wgcf-account.toml wgcf-profile.conf
