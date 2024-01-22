@@ -12,6 +12,8 @@ yellow(){
     echo -e "\033[33m\033[01m$1\033[0m"
 }
 
+md5sum result.csv | grep -q 50be6679e544f9cc85f1db223d5544ed && yellow "您正在使用本项目预置的warp节点，建议您自行进行优选IP并替换左侧的files/result.csv文件。"
+
 rm -f wgcf-account.toml wgcf-profile.conf
 green "请稍等..."
 chmod +x ./wgcf
