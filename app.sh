@@ -46,7 +46,7 @@ set -e
 
 set +e
 # use grep to find the license key
-license_key=$(grep -oP "(?<=license_key = ')[^']+" wgcf-account.toml)
+license_key=$(grep -oe "(?<=license_key = ')[^']+" wgcf-account.toml)
 if [[ -z $license_key ]]; then
     license_key="unknown"
 fi
@@ -59,7 +59,7 @@ python3 generate_surfboard_config.py wgcf-profile.conf > $output_filename
 
 rm -f wgcf-account.toml wgcf-profile.conf
 green 生成完成，文件名：$output_filename
-green 左侧点击${output_filename}，再点击Download即可下载
+green 左侧右键点击${output_filename}，再点击Download即可下载
 
 red 警告：公开的replit库里的内容可以被任何人看到！
 red 如果你使用了公开的replit库（replit免费账号），那么请你下载完后删除配置文件，否则你的配置文件将会被盗用！
