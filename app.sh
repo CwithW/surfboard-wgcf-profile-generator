@@ -46,7 +46,7 @@ set -e
 
 set +e
 # use grep to find the license key
-license_key=$(grep -oe "(?<=license_key = ')[^']+" wgcf-account.toml)
+license_key=$(egrep -o "license_key = '(.+)'" wgcf-account.toml | cut -d "'" -f 2)
 if [[ -z $license_key ]]; then
     license_key="unknown"
 fi
@@ -57,7 +57,7 @@ set -e
 output_filename="surfboard_warp_${license_key}.conf"
 python3 generate_surfboard_config.py wgcf-profile.conf > $output_filename
 
-rm -f wgcf-account.toml wgcf-profile.conf
+# rm -f wgcf-account.toml wgcf-profile.conf
 green 生成完成，文件名：$output_filename
 green 左侧右键点击${output_filename}，再点击Download即可下载
 
