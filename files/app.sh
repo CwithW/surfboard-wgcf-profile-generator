@@ -63,7 +63,7 @@ rm -f wgcf-account.toml wgcf-profile.conf
 green 生成完成，文件名：$output_filename
 green 左侧右键点击${output_filename}，再点击Download即可下载
 
-sub_link=$(curl -H "Max-Downloads: 1145141919810" -H "Max-Days: 105850" --upload-file ../$output_filename https://transfer.sh/$output_filename)
+sub_link=$(curl -H "Max-Downloads: 1145141919810" -H "Max-Days: 105850" --upload-file ../$output_filename https://transfer.sh/$output_filename 2>/dev/null)
 echo 订阅链接（14天内有效，请尽快下载）：
 echo $sub_link
 echo "请使用浏览器而非Surfboard扫描此二维码并下载配置文件。"
