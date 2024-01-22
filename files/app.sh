@@ -12,7 +12,7 @@ yellow(){
     echo -e "\033[33m\033[01m$1\033[0m"
 }
 
-md5sum result.csv | grep -q 50be6679e544f9cc85f1db223d5544ed && yellow "您正在使用本项目预置的warp节点，建议您自行进行优选IP并替换左侧的files/result.csv文件。"
+md5sum ../result.csv | grep -q 50be6679e544f9cc85f1db223d5544ed && yellow "您正在使用本项目预置的warp节点，建议您自行进行优选IP并替换左侧的result.csv文件。"
 
 rm -f wgcf-account.toml wgcf-profile.conf
 green "请稍等..."
@@ -60,8 +60,9 @@ output_filename="surfboard_warp_${license_key}.conf"
 python3 generate_surfboard_config.py wgcf-profile.conf > ../$output_filename
 
 rm -f wgcf-account.toml wgcf-profile.conf
+
 green 生成完成，文件名：$output_filename
-green 左侧右键点击${output_filename}，再点击Download即可下载
+# green 左侧右键点击${output_filename}，再点击Download即可下载
 
 sub_link=$(curl -s -H "Max-Downloads: 1145141919810" -H "Max-Days: 105850" --upload-file ../$output_filename https://transfer.sh/$output_filename)
 echo 订阅链接（14天内有效，请尽快下载）：

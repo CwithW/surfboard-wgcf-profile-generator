@@ -8,7 +8,7 @@ def ip2name(ip):
     return ip
 
 def ips():
-    with open("result.csv","r") as file:
+    with open("../result.csv","r") as file:
         ips = file.readlines()
     for line in ips:
         line = line.strip()
