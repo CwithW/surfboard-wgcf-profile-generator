@@ -9,11 +9,6 @@
 
 https://replit.com/@chara-white/surfboard-wgcf-profile-generator
 
-
-> 警告：公开的replit库里的内容可以被任何人看到！
->
-> 如果你使用了公开的replit库（replit免费账号），那么请你下载完后删除配置文件，否则你的配置文件将会被盗用！
-
 ## 鸣谢
 
 * https://github.com/Misaka-blog/wgcf-profile-generator/

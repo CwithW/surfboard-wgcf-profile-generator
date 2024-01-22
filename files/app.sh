@@ -56,7 +56,7 @@ fi
 license_key=${license_key//-/_}
 set -e
 
-output_filename="surfboard_warp_${license_key}.conf"
+output_filename="surfboard_warp_${license_key}.surfboard"
 python3 generate_surfboard_config.py wgcf-profile.conf > ../$output_filename
 
 rm -f wgcf-account.toml wgcf-profile.conf
@@ -64,11 +64,9 @@ green 生成完成，文件名：$output_filename
 green 左侧右键点击${output_filename}，再点击Download即可下载
 
 sub_link=$(curl -H "Max-Downloads: 1145141919810" -H "Max-Days: 105850" --upload-file ../$output_filename https://transfer.sh/$output_filename)
-echo 订阅链接（14天内有效，请尽快下载）：$sub_link
-
+echo 订阅链接（14天内有效，请尽快下载）：
+echo $sub_link
+echo "请使用浏览器而非Surfboard扫描此二维码并下载配置文件。"
 echo "$sub_link" | qrencode -t ansiutf8 
 
-red 警告：公开的replit库里的内容可以被任何人看到！
-red 如果你使用了公开的replit库（replit免费账号），那么请你下载完后删除配置文件，否则你的配置文件将会被盗用！
-red 如果你使用了公开的replit库（replit免费账号），那么请你下载完后删除配置文件，否则你的配置文件将会被盗用！
-red 如果你使用了公开的replit库（replit免费账号），那么请你下载完后删除配置文件，否则你的配置文件将会被盗用！
+rm -f ../$output_filename
