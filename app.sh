@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#!/bin/sh
-
 red(){
     echo -e "\033[31m\033[01m$1\033[0m"
 }
@@ -16,9 +14,9 @@ yellow(){
 
 rm -f wgcf-account.toml wgcf-profile.conf
 green "请稍等..."
-
+chmod +x ./wgcf
 echo | ./wgcf register >/dev/null 2>&1
-chmod +x wgcf-account.toml
+chmod +x wgcf-account.toml 
 
 yellow "获取CloudFlare WARP账号密钥信息方法: "
 green "电脑: 下载并安装CloudFlare WARP→设置→偏好设置→账户→复制密钥到脚本中"

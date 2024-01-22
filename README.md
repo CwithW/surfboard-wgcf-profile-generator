@@ -7,7 +7,7 @@
 由于subconverter不支持surfboard的WireGuard节点，所以这里预置了一个surfboard模板配置文件，你可以自行替换项目中的`template.surfboard.ini`文件。
 ## Replit 项目地址
 
-https://replit.com/@misaka-blog/wgcf-profile-generator
+https://replit.com/@chara-white/surfboard-wgcf-profile-generator
 
 
 > 警告：公开的replit库里的内容可以被任何人看到！
